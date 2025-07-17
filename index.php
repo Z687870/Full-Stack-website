@@ -15,11 +15,18 @@
     <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
-        <a href="#">Collection</a>
+        <a href="#">participants</a>
         <a href="#">Contact</a>
     </nav>
    <div class="user-auth">
-    <button type="button" class="login-btn" style="display: none">Login</button>
+    <div class="profile-info" style="display: none;">
+      <div class="avatar-circle">P</div>
+      <div class="dropdown">
+        <a href="#">My Account</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+    <button type="button" class="login-btn">Login</button>
    </div>       
 
   </header>
@@ -28,12 +35,19 @@
     <h1>Hey Mr Zithwana</h1>
   </section>
 
+  <div class="alert-box" style="display: none;">
+    <div class="alert success">
+      <i class='bx  bxs-checks'  ></i> 
+      <span>Successful Registered</span>
+    </div>
+  </div>
+
   <div class="auth-modal">
       <button type="button" class="close-btn"><i class='bx  bx-x'  ></i> </button>
 
     <div class="form-box login">
         <h2>Login</h2>
-        <form action="">
+        <form action="auth_process.php" method="POST">
             <div class="input-box">
                 <input type="email" name="email" placeholder="Email" required>
                 <i class='bx  bxs-envelope'  ></i> 
@@ -49,7 +63,7 @@
     
     <div class="form-box create">
         <h2>Register</h2>
-        <form action="">
+        <form action="auth_process.php" method="POST">
             <div class="input-box">
                 <input type="text" name="name" placeholder="Name" required>
               <i class='bx  bxs-user-circle'  ></i> 
